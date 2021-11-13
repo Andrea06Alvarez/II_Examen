@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Examen2_AndreaAlvarez.Vistas
 {
-    public partial class TicketsView : Form
+    public partial class Tickets : Form
     {
-        public TicketsView()
+        public Tickets()
         {
             InitializeComponent();
         }
+
     }
 }

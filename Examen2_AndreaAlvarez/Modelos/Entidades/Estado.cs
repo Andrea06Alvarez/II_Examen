@@ -6,22 +6,10 @@ using System.Threading.Tasks;
 
 namespace Examen2_AndreaAlvarez.Modelos.Entidades
 {
-    public class Usuario
+    public class Estado
     {
-        public int Id { get; set; }
+        public int Codigo { get; set; }
 
         public string Nombre { get; set; }
-
-        public string Email {get; set;}
-
-        public string Clave { get; set; }
-
-        
-    
-    
-    
     }
-
-
-
 }

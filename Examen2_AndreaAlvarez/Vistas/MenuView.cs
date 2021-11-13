@@ -32,7 +32,7 @@ namespace Examen2_AndreaAlvarez.Vistas
 
         private void TicketsToolStripButton_Click(object sender, EventArgs e)
         {
-            TicketsView vista = new TicketsView();
+            Tickets vista = new Tickets();
             vista.MdiParent = this;
             vista.Show();
         }

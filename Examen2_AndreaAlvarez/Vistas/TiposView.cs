@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examen2_AndreaAlvarez.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace Examen2_AndreaAlvarez.Vistas
         public TiposView()
         {
             InitializeComponent();
+
+            TiposController controller = new TiposController(this);
         }
+
+      
     }
 }

@@ -29,36 +29,37 @@ namespace Examen2_AndreaAlvarez.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.DetalledataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
+            this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // DetalledataGridView
+            // DetalleDataGridView
             // 
-            this.DetalledataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DetalleDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DetalledataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DetalledataGridView.Location = new System.Drawing.Point(1, 96);
-            this.DetalledataGridView.Name = "DetalledataGridView";
-            this.DetalledataGridView.Size = new System.Drawing.Size(473, 267);
-            this.DetalledataGridView.TabIndex = 0;
+            this.DetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleDataGridView.Location = new System.Drawing.Point(-2, 0);
+            this.DetalleDataGridView.Name = "DetalleDataGridView";
+            this.DetalleDataGridView.Size = new System.Drawing.Size(631, 417);
+            this.DetalleDataGridView.TabIndex = 0;
             // 
             // DetalleView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 358);
-            this.Controls.Add(this.DetalledataGridView);
+            this.ClientSize = new System.Drawing.Size(626, 414);
+            this.Controls.Add(this.DetalleDataGridView);
+            this.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DetalleView";
-            this.Text = "DetalleView";
-            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
+            this.Text = "Detalle";
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DetalledataGridView;
+        public System.Windows.Forms.DataGridView DetalleDataGridView;
     }
 }
