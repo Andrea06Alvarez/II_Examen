@@ -24,6 +24,7 @@ namespace Examen2_AndreaAlvarez.Modelos.DAO
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
+                comando.Parameters.Clear();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
                 comando.Parameters.Add("@TipodeSoporte", SqlDbType.NVarChar, 100).Value = user.TipoSoporte;
@@ -38,7 +39,7 @@ namespace Examen2_AndreaAlvarez.Modelos.DAO
             return inserto;
         }
 
-        public DataTable GetUsuarios()
+        public DataTable GetTipo()
         {
             DataTable dt = new DataTable();
             try
@@ -67,10 +68,11 @@ namespace Examen2_AndreaAlvarez.Modelos.DAO
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" DELETE FROM TIPOSOPORTE ");
-                sql.Append(" WHERE CODIGO = @Codigo; ");
+                sql.Append(" WHERE CODIGOTIPO = @Codigo; ");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
+                comando.Parameters.Clear();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
                 comando.Parameters.Add("@Codigo", SqlDbType.Int).Value = codigo;

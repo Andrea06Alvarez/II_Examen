@@ -9,25 +9,29 @@ using System.Threading.Tasks;
 
 namespace Examen2_AndreaAlvarez.Modelos.DAO
 {
-    public class EstadoDAO : Conexion 
+    public class TicketDAO : Conexion 
     {
         SqlCommand comando = new SqlCommand();
 
-        public bool InsertarNuevoEstado(Estado estado)
+        public bool InsertarNuevoTicket(Ticket ticket)
         {
             bool inserto = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" INSERT INTO ESTADO");
-                sql.Append(" VALUES (@Nombre); ");
+                sql.Append(" INSERT INTO TICKET ");
+                sql.Append(" VALUES (@Nombre, @Cantidad, @Fecha, @TipoDeSoporte, @NombreEstado); ");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.Parameters.Clear();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 100).Value = estado.Nombre;
+                comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 70).Value =ticket.NombreCliente;
+                comando.Parameters.Add("@Cantidad", SqlDbType.Int).Value = ticket.CantidadDeTicket;
+                comando.Parameters.Add("@Fecha", SqlDbType.DateTime).Value = ticket.Fecha;
+                comando.Parameters.Add("@TipoDeSoporte", SqlDbType.NVarChar, 100).Value = ticket.TipoDeSoporte;
+                comando.Parameters.Add("@NombreEstado", SqlDbType.VarChar, 70).Value = ticket.NombreEstado;
                 comando.ExecuteNonQuery();
                 inserto = true;
                 MiConexion.Close();
@@ -61,32 +65,27 @@ namespace Examen2_AndreaAlvarez.Modelos.DAO
             return dt;
         }
 
-        public bool EliminarTipoSoporte(int codigo)
+        public DataTable GetTipo()
         {
-            bool modifico = false;
+            DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" DELETE FROM ESTADO ");
-                sql.Append(" WHERE CODIGOESTADO = @Codigo; ");
+                sql.Append(" SELECT * FROM TIPOSOPORTE ");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
-                comando.Parameters.Clear();
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sql.ToString();
-                comando.Parameters.Add("@Codigo", SqlDbType.Int).Value = codigo;
-                comando.ExecuteNonQuery();
-                modifico = true;
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr);
                 MiConexion.Close();
-
             }
-            catch (Exception )
+            catch (Exception)
             {
-                return modifico;
             }
-            return modifico;
+            return dt;
         }
+
     }
 }
-

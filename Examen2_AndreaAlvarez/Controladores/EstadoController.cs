@@ -90,7 +90,7 @@ namespace Examen2_AndreaAlvarez.Controladores
 
         private void ListarEstado()
         {
-            vista.EstadoDataGridView.DataSource = estadoDAO.GetUsuarios();
+            vista.EstadoDataGridView.DataSource = estadoDAO.GetEstado();
         }
         private void NuevoEstado(object serder, EventArgs e)
         {
@@ -119,7 +119,7 @@ namespace Examen2_AndreaAlvarez.Controladores
 
             vista.GuardarButton.Enabled = false;
             vista.CancelarButton.Enabled = false;
-            vista.EliminarButton.Enabled = false;
+            vista.EliminarButton.Enabled = true;
             vista.NuevoButton.Enabled = true;
         }
 

@@ -16,32 +16,99 @@ namespace Examen2_AndreaAlvarez.Vistas
             InitializeComponent();
         }
 
+        TiposView vistaTipos;
         private void TiposToolStripButton_Click(object sender, EventArgs e)
         {
-            TiposView vista = new TiposView();
-            vista.MdiParent = this;
-            vista.Show();
+            if (vistaTipos == null)
+            {
+                vistaTipos = new TiposView();
+                vistaTipos.MdiParent = this;
+                vistaTipos.FormClosed += vistaTipos_FormClosed;
+                vistaTipos.Show();
+            }
+            else
+            {
+                vistaTipos.Activate();
+            }
+           
+        }
+        private void vistaTipos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaTipos = null;
+           
         }
 
+
+
+        EstadoView vistaEstado;
         private void EstadoToolStripButton_Click(object sender, EventArgs e)
         {
-           EstadoView vista = new EstadoView();
-            vista.MdiParent = this;
-            vista.Show();
+            if (vistaEstado == null)
+            {
+                vistaEstado = new EstadoView();
+                vistaEstado.MdiParent = this;
+                vistaEstado.FormClosed += vistaEstado_FormClosed; 
+                vistaEstado.Show();
+            }
+            else
+            {
+                vistaEstado.Activate();
+            }
+            
+        }
+        private void vistaEstado_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+            vistaEstado = null;
+            
         }
 
+
+        TicketsView vistaTicket; 
         private void TicketsToolStripButton_Click(object sender, EventArgs e)
         {
-            Tickets vista = new Tickets();
-            vista.MdiParent = this;
-            vista.Show();
+            if (vistaTicket == null)
+            {
+                vistaTicket = new TicketsView();
+                vistaTicket.MdiParent = this;
+                vistaTicket.FormClosed += vistaTicket_FormClosed;
+                vistaTicket.Show();
+            }
+            else
+            {
+                vistaTicket.Activate();
+            }
+            
+        }
+        private void vistaTicket_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+            vistaTicket = null;
+           
         }
 
+
+        DetalleView vistaDetalle;
         private void DetalleToolStripButton_Click(object sender, EventArgs e)
         {
-            DetalleView vista = new DetalleView();
-            vista.MdiParent = this;
-            vista.Show();
+            if (vistaDetalle == null)
+            {
+                vistaDetalle = new DetalleView();
+                vistaDetalle.MdiParent = this;
+                vistaDetalle.FormClosed += vistaDetalle_FormClosed;
+                vistaDetalle.Show();
+            }
+            else
+            {
+                vistaDetalle.Activate();
+            }
+            
         }
+        private void vistaDetalle_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+            vistaDetalle = null;
+        }
+
     }
 }

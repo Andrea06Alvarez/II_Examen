@@ -29,6 +29,8 @@ namespace Examen2_AndreaAlvarez.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuView));
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
@@ -42,6 +44,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.ToolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.DetalleToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
@@ -121,7 +124,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(201, 72);
+            this.toolStripEx1.Size = new System.Drawing.Size(168, 72);
             this.toolStripEx1.TabIndex = 0;
             // 
             // TiposToolStripButton
@@ -215,7 +218,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.TicketstoolStripEx.Office12Mode = false;
             this.TicketstoolStripEx.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.TicketstoolStripEx.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TicketstoolStripEx.Size = new System.Drawing.Size(272, 72);
+            this.TicketstoolStripEx.Size = new System.Drawing.Size(188, 72);
             this.TicketstoolStripEx.TabIndex = 0;
             // 
             // TicketsToolStripButton
@@ -262,7 +265,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(266, 72);
+            this.toolStripEx4.Size = new System.Drawing.Size(173, 72);
             this.toolStripEx4.TabIndex = 0;
             // 
             // DetalleToolStripButton
@@ -277,12 +280,25 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.DetalleToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.DetalleToolStripButton.Click += new System.EventHandler(this.DetalleToolStripButton_Click);
             // 
+            // tabbedMDIManager1
+            // 
+            this.tabbedMDIManager1.AttachedTo = this;
+            this.tabbedMDIManager1.CloseButtonBackColor = System.Drawing.Color.White;
+            this.tabbedMDIManager1.CloseButtonToolTip = "";
+            this.tabbedMDIManager1.DropDownButtonToolTip = "";
+            this.tabbedMDIManager1.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabbedMDIManager1.NeedUpdateHostedForm = false;
+            this.tabbedMDIManager1.ShowCloseButtonBackColor = true;
+            this.tabbedMDIManager1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererOffice2010);
+            this.tabbedMDIManager1.ThemeName = "TabRendererOffice2010";
+            // 
             // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 486);
             this.Controls.Add(this.ribbonControlAdv1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
             this.Name = "MenuView";
             this.Text = "Menu";
@@ -321,5 +337,6 @@ namespace Examen2_AndreaAlvarez.Vistas
         private System.Windows.Forms.ToolStripButton EstadoToolStripButton;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx4;
         private System.Windows.Forms.ToolStripButton DetalleToolStripButton;
+        private Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
     }
 }
