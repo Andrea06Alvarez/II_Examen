@@ -35,21 +35,20 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.label3 = new System.Windows.Forms.Label();
             this.CantidadaTikectsTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblHoraActual = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.IdTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.EstadoComboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.CancelarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TipoSoporteComboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.EstadoComboBox = new System.Windows.Forms.ComboBox();
-
-            this.lblHoraActual = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -113,6 +112,14 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS";
             // 
+            // lblHoraActual
+            // 
+            this.lblHoraActual.AutoSize = true;
+            this.lblHoraActual.Location = new System.Drawing.Point(637, 26);
+            this.lblHoraActual.Name = "lblHoraActual";
+            this.lblHoraActual.Size = new System.Drawing.Size(0, 14);
+            this.lblHoraActual.TabIndex = 11;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -126,14 +133,14 @@ namespace Examen2_AndreaAlvarez.Vistas
             // FechaDateTimePicker
             // 
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(723, 77);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(723, 72);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(136, 20);
             this.FechaDateTimePicker.TabIndex = 9;
             // 
             // IdTextBox
             // 
-            this.IdTextBox.Location = new System.Drawing.Point(164, 81);
+            this.IdTextBox.Location = new System.Drawing.Point(165, 74);
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.ReadOnly = true;
             this.IdTextBox.Size = new System.Drawing.Size(327, 20);
@@ -142,7 +149,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 83);
+            this.label2.Location = new System.Drawing.Point(81, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 14);
             this.label2.TabIndex = 7;
@@ -152,7 +159,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(526, 83);
+            this.label4.Location = new System.Drawing.Point(526, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 15);
             this.label4.TabIndex = 6;
@@ -170,6 +177,40 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SELECCION";
+            // 
+            // EstadoComboBox
+            // 
+            this.EstadoComboBox.FormattingEnabled = true;
+            this.EstadoComboBox.Location = new System.Drawing.Point(482, 62);
+            this.EstadoComboBox.Name = "EstadoComboBox";
+            this.EstadoComboBox.Size = new System.Drawing.Size(303, 22);
+            this.EstadoComboBox.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(597, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 14);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Estado:";
+            // 
+            // TipoSoporteComboBox
+            // 
+            this.TipoSoporteComboBox.FormattingEnabled = true;
+            this.TipoSoporteComboBox.Location = new System.Drawing.Point(100, 62);
+            this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
+            this.TipoSoporteComboBox.Size = new System.Drawing.Size(244, 22);
+            this.TipoSoporteComboBox.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(162, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 14);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tipo de soporte:";
             // 
             // CancelarButton
             // 
@@ -199,48 +240,6 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.NuevoButton.TabIndex = 13;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(162, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 14);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tipo de soporte:";
-            // 
-            // TipoSoporteComboBox
-            // 
-            this.TipoSoporteComboBox.FormattingEnabled = true;
-            this.TipoSoporteComboBox.Location = new System.Drawing.Point(100, 62);
-            this.TipoSoporteComboBox.Name = "TipoSoporteComboBox";
-            this.TipoSoporteComboBox.Size = new System.Drawing.Size(244, 22);
-            this.TipoSoporteComboBox.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(597, 33);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 14);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Estado:";
-            // 
-            // EstadoComboBox
-            // 
-            this.EstadoComboBox.FormattingEnabled = true;
-            this.EstadoComboBox.Location = new System.Drawing.Point(482, 62);
-            this.EstadoComboBox.Name = "EstadoComboBox";
-            this.EstadoComboBox.Size = new System.Drawing.Size(303, 22);
-            this.EstadoComboBox.TabIndex = 3;
-            // 
-            // lblHoraActual
-            // 
-            this.lblHoraActual.AutoSize = true;
-            this.lblHoraActual.Location = new System.Drawing.Point(637, 26);
-            this.lblHoraActual.Name = "lblHoraActual";
-            this.lblHoraActual.Size = new System.Drawing.Size(0, 14);
-            this.lblHoraActual.TabIndex = 11;
             // 
             // errorProvider1
             // 

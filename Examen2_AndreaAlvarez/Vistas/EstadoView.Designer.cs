@@ -47,7 +47,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 43);
+            this.label1.Location = new System.Drawing.Point(51, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // 
             // CodigoeEstadoTextBox
             // 
-            this.CodigoeEstadoTextBox.Location = new System.Drawing.Point(114, 43);
+            this.CodigoeEstadoTextBox.Location = new System.Drawing.Point(120, 76);
             this.CodigoeEstadoTextBox.Name = "CodigoeEstadoTextBox";
             this.CodigoeEstadoTextBox.ReadOnly = true;
             this.CodigoeEstadoTextBox.Size = new System.Drawing.Size(351, 21);
@@ -64,7 +64,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // NombreEstadoTextBox
             // 
             this.NombreEstadoTextBox.Enabled = false;
-            this.NombreEstadoTextBox.Location = new System.Drawing.Point(114, 85);
+            this.NombreEstadoTextBox.Location = new System.Drawing.Point(120, 118);
             this.NombreEstadoTextBox.Name = "NombreEstadoTextBox";
             this.NombreEstadoTextBox.Size = new System.Drawing.Size(351, 21);
             this.NombreEstadoTextBox.TabIndex = 3;
@@ -72,7 +72,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 88);
+            this.label2.Location = new System.Drawing.Point(42, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // CancelarButton
             // 
             this.CancelarButton.Enabled = false;
-            this.CancelarButton.Location = new System.Drawing.Point(396, 151);
+            this.CancelarButton.Location = new System.Drawing.Point(402, 184);
             this.CancelarButton.Name = "CancelarButton";
             this.CancelarButton.Size = new System.Drawing.Size(75, 23);
             this.CancelarButton.TabIndex = 12;
@@ -90,7 +90,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(298, 151);
+            this.EliminarButton.Location = new System.Drawing.Point(304, 184);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 23);
             this.EliminarButton.TabIndex = 11;
@@ -100,7 +100,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // GuardarButton
             // 
             this.GuardarButton.Enabled = false;
-            this.GuardarButton.Location = new System.Drawing.Point(200, 151);
+            this.GuardarButton.Location = new System.Drawing.Point(206, 184);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 23);
             this.GuardarButton.TabIndex = 10;
@@ -109,7 +109,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(101, 151);
+            this.NuevoButton.Location = new System.Drawing.Point(107, 184);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 23);
             this.NuevoButton.TabIndex = 9;

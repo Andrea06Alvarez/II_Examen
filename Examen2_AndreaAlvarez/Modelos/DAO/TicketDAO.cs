@@ -87,5 +87,55 @@ namespace Examen2_AndreaAlvarez.Modelos.DAO
             return dt;
         }
 
+        public DataTable GetTicket()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM TICKET ");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr);
+                MiConexion.Close();
+            }
+            catch (Exception)
+            {
+            }
+            return dt;
+        }
+
+        public bool EliminarTicket(int codigo)
+        {
+            bool modifico = false;
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" DELETE FROM TICKET ");
+                sql.Append(" WHERE CODIGO = @Codigo; ");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.Parameters.Clear();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Codigo", SqlDbType.Int).Value = codigo;
+                comando.ExecuteNonQuery();
+                modifico = true;
+                MiConexion.Close();
+
+            }
+            catch (Exception)
+            {
+                return modifico;
+            }
+            return modifico;
+        }
+
+
     }
 }

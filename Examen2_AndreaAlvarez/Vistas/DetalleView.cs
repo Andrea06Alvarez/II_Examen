@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examen2_AndreaAlvarez.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace Examen2_AndreaAlvarez.Vistas
         public DetalleView()
         {
             InitializeComponent();
+
+            DetalleController controlador = new DetalleController(this);
         }
     }
 }

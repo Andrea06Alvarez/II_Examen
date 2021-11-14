@@ -55,6 +55,7 @@ namespace Examen2_AndreaAlvarez.Vistas
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(192, 20);
             this.PasswordTextBox.TabIndex = 15;
+            this.PasswordTextBox.Text = "1234";
             // 
             // label2
             // 
